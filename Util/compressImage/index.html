@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="file" name="" id="imageFileDom" />
+  
+</body>
+<script src="https://cdn.bootcss.com/babel-polyfill/7.0.0-beta.49/polyfill.min.js"></script>
+<!-- 即使使用es5回调方式的用法，也需要引进polyfill这个支持库，否则报错 -->
+<script src="./index.browser.js"></script>
+<script >
+  // es5回调形式用法
+  document.getElementById("imageFileDom").addEventListener("change", function (e) {
+    compressImage(e, 0.8, function(res){console.log(res)})
+    console.log(2222)
+  })
+
+  // 配合async/await用法
+  // document.getElementById("imageFileDom").addEventListener("change", async function(e) {
+  //   var res = await compressImage(e, 0.8)
+  //   console.log(res)
+  //   console.log(2222)
+  // })
+</script>
+<script>
+  
+</script>
+</html>

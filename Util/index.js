@@ -1,0 +1,1 @@
+export compressImage from "./compressImage"   // 压缩图片方法
